@@ -13,7 +13,7 @@ export async function GET(request: NextRequest) {
 
   const { token } = registerResponse.data
 
-  // SE O redirecTo for undefined ou null redireciona para new URL('/', request.url)
+  // SE O redirecTo for undefined ou null redireciona para new URL('/', request.url) (?? = SE NÃO)
   const redirectURL = redirectTo ?? new URL('/', request.url)
 
   const cookieExpiresInSeconds = 60 * 60 * 24 * 30
